@@ -1,0 +1,55 @@
+.form-example {
+  width: 50%;
+}
+
+.pmt-dropdown-1 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.pmt-dropdown-2 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.select {
+  margin-top: 31px;
+}
+
+.pmt-head-group-allot {
+  margin-top: 15px;
+  padding-top: 15px;
+}
+
+.search-pmt {
+  background: white;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  padding-top: 10px;
+  width: 95%;
+  border-radius: 5px;
+}
+
+.allot-record {
+  width: 100%;
+}
+
+.myDataTable {
+  margin-left: 5%;
+  width: 100%;
+  margin-right: 5%
+}
+.create {
+  background-color: #177ad2;
+  color: white;
+  padding: 5px 26px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 82px 0px 0px;
+  cursor: pointer;
+  border-radius: 5px;
+  float: right;
+}

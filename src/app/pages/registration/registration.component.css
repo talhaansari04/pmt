@@ -1,0 +1,12 @@
+.pmt-1{
+  margin-top: 50px;
+    margin-bottom: 25px;
+    width: 100%;
+    margin-right: 5px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.submitButton{
+  float: right;
+  margin-right: 100px;
+}

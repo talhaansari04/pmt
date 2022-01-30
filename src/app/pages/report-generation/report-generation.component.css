@@ -1,0 +1,126 @@
+.customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.customers td, .customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.customers tr:hover {
+  background-color: #ddd;
+}
+
+.customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #18445a;
+  /*415263*/
+  color: white;
+}
+
+.form-example {
+  width: 50%;
+}
+
+.pmt-dropdown-1 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.pmt-dropdown-2 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.select {
+  margin-top: 31px;
+}
+
+.pmt-head-group-allot {
+  margin-top: 15px;
+  padding-top: 15px;
+}
+.search-pmt{
+  background: white;
+  margin-left: 6px;
+  margin-bottom: 20px;
+  padding-left: 22px;
+  padding-top: 10px;
+  width: 97%;
+  border-radius: 5px;
+}
+.allot-record{
+width: 100%;
+}
+.table-record{
+  margin-left: 25px;
+  margin-top: 0px;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  background: white;
+  width: 95%;
+  border-radius: 5px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+.pmt-pagig{
+  padding-left: 36px;
+  padding-top: 10px;
+  margin-left: 662px;
+  justify-content: flex-end;
+}
+.reset-button{
+  margin-top: 8px;
+  margin-right: 423px
+}
+.button-1 {
+  background-color: #177ad2;
+  border: none;
+  color: white;
+  padding: 5px 15px 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 10px 18px 5px 0px;
+  cursor: pointer;
+  border-radius: 5px;
+  float: right;
+}
+.button-2 {
+  background-color: #177ad2;
+  border: none;
+  color: white;
+  padding: 5px 15px 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 10px 5px 5px 0px;
+  cursor: pointer;
+  border-radius: 5px;
+  float: right;
+}
+.button-3 {
+  background-color: #177ad2;
+  border: none;
+  color: white;
+  padding: 5px 15px 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 10px 5px 5px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  float: right;
+}

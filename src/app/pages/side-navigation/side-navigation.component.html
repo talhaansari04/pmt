@@ -1,0 +1,70 @@
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<mat-sidenav-container fullscreen>
+  <mat-sidenav opened mode="side" class="sidenav">
+
+    <div class="main-div">
+      <div class="nav-title-img">
+        <img src="../../../assets/logo_header.png" alt="Avatar" class="avatar">
+      </div>
+      <div class="nav-title-logout">
+        <a class="nav-title-edit">
+          <i class="fa fa-cog" style="font-size:20px"></i>
+        </a>
+        <a class="nav-title-icon" (click)="logout()">
+          <i class="fa fa-sign-out" style="font-size:20px"></i>
+        </a>
+      </div>
+      <a class="insight-link-1" routerLink="dashboard" routerLinkActive="active">
+        <i class="fa fa-dashboard" style="font-size:20px"></i>
+        Dashboard
+      </a>
+      <hr>
+      <a class="insight-link-2" routerLink="group-allotment" routerLinkActive="deactivate">
+        <i class="fa fa-group" style="font-size:20px"></i>
+        Group Allotment
+      </a>
+      <hr>
+      <a class="insight-link-2" routerLink="project-allotment" routerLinkActive="deactivate">
+        <i class="fa fa-file-powerpoint-o" style="font-size:20px"></i>
+        Project Allotment
+      </a>
+      <hr>
+      <a class="insight-link-2" routerLink="guide-allotment" routerLinkActive="deactivate">
+        <i class="fa fa-file-powerpoint-o" style="font-size:20px"></i>
+        Guide Allotment
+      </a>
+      <hr>
+      <a class="insight-link-2" routerLink="guide-mangement" routerLinkActive="deactivate">
+        <i class="fa fa-address-card-o" style="font-size:20px"></i>
+        Guide Management
+      </a>
+      <hr>
+      <a class="insight-link-2" routerLink="edit-project" routerLinkActive="deactivate">
+        <i class="fa fa-edit" style="font-size:20px"></i>
+        Add Project
+      </a>
+      <hr>
+      <a class="insight-link-2" routerLink="report" routerLinkActive="deactivate">
+        <i class="fa fa-file-pdf-o" style="font-size:20px"></i>
+        Reports
+      </a>
+      <hr>
+      <a class="insight-link-2" routerLink="manage-user" routerLinkActive="deactivate">
+        <i class="fa fa-users" style="font-size:20px"></i>
+        Manage User
+      </a>
+      <hr>
+      <a class="insight-link-2" routerLink="support" routerLinkActive="deactivate">
+        <i class="fa fa-podcast" style="font-size:20px"></i>
+        Support
+      </a>
+      <hr>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet>
+    </router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<app-popup-model ></app-popup-model>

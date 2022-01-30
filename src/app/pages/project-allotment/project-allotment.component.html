@@ -1,0 +1,149 @@
+<app-loader></app-loader>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="pmt-head-group-allot">
+            Project Allotment
+            <hr>
+          </h3>
+        </div>
+      </div>
+      <div class="search-pmt">
+        <div class="row">
+          <div class="col-md-12">
+            <form>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Branch</label>
+                    <select class="form-control form-control-sm"  name="branch" [(ngModel)]="model.branch"
+                      #branch="ngModel" required>
+                      <option [disabled]="true">Select</option>
+                      <option *ngFor="let branch of dropDown.branch">{{branch.key}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group ">
+                    <label for="exampleFormControlSelect1">Session</label>
+                    <select class="form-control form-control-sm" name="sess" [(ngModel)]="model.sess" #sess="ngModel" required>
+                      <option [disabled]="true">Select</option>
+                      <option *ngFor="let session of dropDown.session">{{session.key}}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="select"> <button type="submit" (click)="getAllotedStudentList()"
+                      class="btn btn-primary">Fetch</button></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" *ngIf="tableDataShow">
+        <div>
+          <div class="col-md-12">
+            <div class="mydiv">
+              <a class="button-1" (click)="switchTab('One')"
+                [ngStyle]="{'background-color':changetab === 'One' ? 'white' : '#177ad2','color':changetab === 'One' ? 'black' : 'white' }">Record's</a>
+
+              <a class="button-3" (click)="switchTab('Three')"
+                [ngStyle]="{'background-color':changetab === 'Three' ? 'white' : '#177ad2','color':changetab === 'Three' ? 'black' : 'white' }"
+                [hidden]="openEditTab">Edit</a>
+              <a class="divclose" (click)="closeTab()" [hidden]="openEditTab"><i class="fa fa-close"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div [ngSwitch]="changetab" *ngIf="tableDataShow">
+        <div *ngSwitchCase="'One'" class="tab-1">
+          <div class="row" *ngIf="tableDataShow">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="allot-record">
+                  <div class="col-md-12">
+                    <!-- <h2>Records</h2> -->
+                    <hr>
+                  </div>
+                </div>
+                <app-dynamic-table-with-text-box class="myTable" [tableData]="tableData" (processComplete)="openTab($event)">
+                </app-dynamic-table-with-text-box>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngSwitchCase="'Three'" class="tab-2">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Group Name</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput" [disabled]="true"
+                        value="{{groupName}}">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Enrollment Number</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput" [disabled]="true"
+                        value="{{erNumber}}">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Roll Number</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput" [disabled]="true"
+                        value="{{rollNumber}}">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Platform</label>
+                      <select class="form-control" name="platform" [(ngModel)]="tabData.platform" #platform="ngModel"
+                        required>
+                        <option [disabled]="true">Select</option>
+                        <option *ngFor="let type of dropDown.platform">{{type.key}}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Project Type</label>
+                      <select class="form-control" name="project" [(ngModel)]="tabData.project" #project="ngModel"
+                        required>
+                        <option [disabled]="true">Select</option>
+                        <option *ngFor="let project of dropDown.type">{{project.key}}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Project Name</label>
+                      <input type="text" class="form-control" placeholder="Insert Project Name" name="projectname"
+                        [(ngModel)]="tabData.projectname" #projectname="ngModel" required>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <a class="button" (click)="allotProject()" >Submitt</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,115 @@
+<app-loader></app-loader>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>
+        Project Management Tools
+      </h1>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>
+        Registration
+      </h3>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="pmt-1">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Name </label>
+              <input type="text" class="form-control" placeholder="Name" name="name" [(ngModel)]="model.name"
+                #name="ngModel" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Enrollment Number</label>
+              <input type="text" class="form-control" placeholder="E.g:- 19001108091" name="enrollNumber"
+                [(ngModel)]="model.enrollNumber" #enrollNumber="ngModel" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Roll Number</label>
+              <input type="text" class="form-control" placeholder="E.g:- 1900100944" name="rollNumber"
+                [(ngModel)]="model.rollNumber" #rollNumber="ngModel" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Department</label>
+              <select class="form-control" id="exampleFormControlSelect1" name="depart" [(ngModel)]="model.depart"
+              #depart="ngModel" required>
+              <option [disabled]="true">Select</option>
+              <option *ngFor="let depart of dropDown.department">{{depart.key}}</option>
+            </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Branch</label>
+              <select class="form-control" id="exampleFormControlSelect1" name="branch" [(ngModel)]="model.branch"
+                #branch="ngModel" required>
+                <option [disabled]="true">Select</option>
+                <option *ngFor="let branch of dropDown.branch">{{branch.key}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Group</label>
+              <select class="form-control" name="group" [(ngModel)]="model.group" #group="ngModel" required>
+                <option  [disabled]="true">Select</option>
+                <option *ngFor="let group of dropDown.group">{{group.key}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Session</label>
+              <select class="form-control" name="sess" [(ngModel)]="model.sess" #sess="ngModel" required>
+                <option [disabled]="true">Select</option>
+                <option *ngFor="let session of dropDown.session">{{session.key}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Email</label>
+              <input type="text" class="form-control" placeholder="E.g:- user@gmail.com" name="email"
+                [(ngModel)]="model.email" #email="ngModel" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Mobile Number</label>
+              <input type="text" class="form-control" placeholder="E.g:- +9198xxxxxxx" name="mobile"
+                [(ngModel)]="model.mobile" #mobile="ngModel" required>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="submitButton">
+        <button type="button" class="btn btn-success" (click)="doOnRegister()">
+          Button
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

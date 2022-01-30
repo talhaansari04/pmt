@@ -1,0 +1,41 @@
+
+.divclose {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 12px 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-1 {
+  background-color: #177ad2;
+    border: none;
+    color: white;
+    padding: 8px 39px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 0px 0px 25px;
+    cursor: pointer;
+    border-radius: 5px 5px 0px 0px;
+}
+.main-div{
+  margin-left: 25px;
+}
+.list-data{
+  background: white;
+  border-radius: 0px 0px 5px 5px;
+  padding-top: 5px;
+
+}
+.list{
+  cursor: pointer;
+  margin-left: 10px;
+  padding-left: 5px;
+}
+.list:hover{
+  background-color: #ddd;
+}
+

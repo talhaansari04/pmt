@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<app-loader></app-loader>
+<div class="login">
+  <div class="wrapper wrapper-login wrapper-login-full p-0">
+    <div
+      class="login-aside w-50 d-flex flex-column align-items-center justify-content-center text-center bg-secondary-gradient side-1">
+      <!-- <img src="../assets/mps.png" alt="logo" class="my-2 w-100" style="max-width:420px;"> -->
+      <!-- <p class="subtitle text-dark op-7">Content Usage Analytics for Better Decision-Making</p> -->
+    </div>
+    <div class="login-aside w-50 d-flex align-items-center justify-content-center bg-theme text-white ">
+      <div class="container container-login">
+        <div class="title-img">
+          <img src="../../../assets/logo_header.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="login-form">
+          <div class="form-group">
+            <form #f="ngForm" (ngSubmit)="f.form.valid && login()" novalidate>
+
+              <div class="input-container">
+                <i class="fa fa-user icon"></i>
+                <input type="text" class="form-control" placeholder="Username" name="user" [(ngModel)]="model.user"  #user="ngModel" required>
+
+              </div>
+              <div class="input-container">
+                <i class="fa fa-key icon"></i>
+                <input type="password" class="form-control" placeholder="Password" name="pass" [(ngModel)]="model.pass" #pass="ngModel" required>
+
+              </div>
+              <button type="submit" class="btn">Login</button>
+              <div *ngIf="f.submitted && !user.valid" class="help-block" style="color: red;">Username is required</div>
+              <div *ngIf="f.submitted && !pass.valid" class="help-block" style="color: red;">Password is required</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

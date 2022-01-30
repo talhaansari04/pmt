@@ -1,0 +1,151 @@
+
+
+.form-example {
+  width: 50%;
+}
+
+.pmt-dropdown-1 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.pmt-dropdown-2 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.select {
+  margin-top: 31px;
+}
+
+.pmt-head-group-allot {
+  margin-top: 15px;
+  padding-top: 15px;
+}
+.search-pmt{
+  background: white;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-top: 10px;
+    width: 95%;
+    border-radius: 5px;
+}
+.allot-record{
+width: 100%;
+}
+.table-record{
+  margin-left: 25px;
+  margin-top: 0px;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  background: white;
+  width: 95%;
+  border-radius: 5px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+.pmt-pagig{
+  padding-left: 36px;
+  padding-top: 10px;
+  margin-left: 662px;
+  justify-content: flex-end;
+}
+.reset-button{
+  margin-top: 8px;
+  margin-right: 423px
+}
+.tab-1{
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-left: 10px;
+  padding-right: 20px;
+  background: white;
+  border-radius: 0px;
+  width: 90%;
+}
+.tab-2{
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-left: 10px;
+  background: white;
+  border-radius: 5px;
+  width: 97%;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.tab-3{
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-left: 10px;
+  background: white;
+  border-radius: 5px;
+  width: 90%;
+}
+.button-1 {
+  background-color: #177ad2;
+    border: none;
+    color: white;
+    padding: 8px 39px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 3px 0px 25px;
+    cursor: pointer;
+    border-radius: 5px 5px 0px 0px;
+}
+.button-2 {
+  background-color: #177ad2;
+  border: none;
+  color: white;
+  padding: 8px 39px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 3px 0px 0px;
+  cursor: pointer;
+  border-radius: 5px 5px 0px 0px;
+}
+.button-3 {
+  background-color: #177ad2;
+    border: none;
+    color: white;
+    padding: 8px 39px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 0px 0px 3px;
+    border-radius: 5px 0px 0px 0px;
+}
+
+.button {
+  background-color: #177ad2;
+  border: none;
+  color: white;
+  padding: 8px 39px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 11px 0px 0px;
+  cursor: pointer;
+  border-radius: 5px 5px 5px 5px;
+  float: right;
+}
+.divclose {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 12px 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.mydiv{
+  display: flex;
+}
+.myTable{
+  overflow: hidden;
+}

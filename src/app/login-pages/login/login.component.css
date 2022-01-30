@@ -1,0 +1,110 @@
+.login .wrapper.wrapper-login-full {
+  justify-content: unset;
+  align-items: unset;
+  padding: 0 !important;
+}
+
+.login .wrapper.wrapper-login {
+  display: flex;
+  justify-content: center;
+  height: unset;
+  padding: 15px;
+}
+
+.wrapper {
+  min-height: 100vh;
+  position: relative;
+  top: 0;
+  height: 100vh;
+}
+
+.login .login-aside .title {
+  font-size: 36px;
+}
+
+.login .wrapper.wrapper-login .container-login, .login .wrapper.wrapper-login .container-signup {
+  width: 570px;
+  padding: 40px 25px;
+  border-radius: 5px;
+}
+
+.login h3 {
+  font-size: 29px;
+  font-weight: 600;
+  margin-bottom: 65px;
+  color: black;
+}
+
+.login .show-password {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.bg-theme {
+  background: white!important;
+}
+.side-1{
+  background: #18445A;
+}
+@media screen and (max-width: 576px) {
+  .login .wrapper-login-full {
+    flex-direction: column;
+  }
+  .login .login-aside {
+    width: 100% !important;
+  }
+  .login .wrapper.wrapper-login {
+    justify-content: start;
+  }
+}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: #18445A;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+  border-radius: 5px 0px 0px 5px;
+  height: calc(1.5em + .75rem + 2px);
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid #18445A;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #18445A;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+.title-img{
+  margin: 5px 100px 5px 100px;
+  padding-left: 50px;
+  padding-right: 35px
+}

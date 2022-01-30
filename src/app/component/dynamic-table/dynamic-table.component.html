@@ -1,0 +1,47 @@
+<div class="mydatatable">
+  <table class="customers">
+    <tr>
+      <th *ngFor="let item of data[0] |keyvalue: originalOrder" [hidden]="item.key== 'checked' ? true:false">
+        {{item.key| uppercase}}
+      </th>
+      <th>
+        Select
+      </th>
+    </tr>
+    <tr *ngFor="let item of data | slice:startIndex:endIndex; let i = index">
+      <td *ngFor="let it of item | keyvalue: originalOrder; let j=index" [hidden]="it.key== 'checked' ? true:false">
+
+        {{it.value}}
+
+      </td>
+      <td>
+        <input type="checkbox" (click)="onDoItCheckBox($event,item)" [checked]="item.checked">
+      </td>
+    </tr>
+  </table>
+  <div class="mypagignation">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" (click)="updateFirstAndLastIndex()" aria-label="Previous">
+            <span aria-hidden="true">Previous</span>
+          </a>
+        </li>
+        <li class="page-item" *ngFor="let item of data | slice:0:data.length/10;let i = index">
+          <a class="page-link" (click)="updateIndex(i)">{{i+1}}</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" (click)="updateLastIndex()" aria-label="Next">
+            <span aria-hidden="true">Last</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="reset-button">
+      <div class="col-md-4">
+        <a class="create" (click)="reset()" >Reset</a>
+      </div>
+    </div>
+  </div>
+</div>
+

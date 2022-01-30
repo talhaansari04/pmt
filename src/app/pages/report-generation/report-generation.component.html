@@ -1,0 +1,119 @@
+<app-loader></app-loader>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="pmt-head-group-allot">
+            Generate Report
+            <hr>
+          </h3>
+        </div>
+      </div>
+      <div class="search-pmt">
+
+        <div class="row">
+          <div class="col-md-12">
+            <form>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Branch</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group ">
+                    <label for="exampleFormControlSelect1">Session</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="select"> <button type="submit" (click)="goToData()" class="btn btn-primary">Fetch</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row" *ngIf="tableDataShow">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="table-record">
+              <div class="allot-record">
+                <div class="col-md-12">
+                  <h2>Records</h2>
+                  <hr>
+                </div>
+              </div>
+               <div class="row">
+                <div class="col-md-12">
+                  <a class="button-1" >Reset</a>
+                  <a class="button-2" >PDF</a>
+                  <a class="button-3" >CSV</a>
+                </div>
+               </div>
+              <div class="col-md-12">
+                <table class="customers">
+                  <tr *ngFor="let item of data | slice:0:1">
+                    <th *ngFor="let item of data[0] | keyvalue">
+                      {{item.key}}
+                    </th>
+                  </tr>
+                  <tr *ngFor="let item of data | slice:startIndex:endIndex;let i = index">
+                    <td *ngFor="let it of item | keyvalue; let j=index">
+                      {{it.value}}
+                    </td>
+                  </tr>
+                </table>
+                <div class="row">
+                  <div class="reset-button">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-primary">
+                        Reset
+                      </button>
+                    </div>
+                  </div>
+                  <div class="pmt-pagig">
+                    <div class="col-md-8">
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                          <li class="page-item">
+                            <a class="page-link" (click)="updateFirstAndLastIndex()" aria-label="Previous">
+                              <span aria-hidden="true">Previous</span>
+                            </a>
+                          </li>
+                          <li class="page-item" *ngFor="let item of data | slice:0:data.length/10;let i = index">
+                            <a class="page-link" (click)="updateIndex(i)">{{i+1}}</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" (click)="updateLastIndex()" aria-label="Next">
+                              <span aria-hidden="true">Last</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,81 @@
+<!-- <form>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputEmail4">Group Name</label>
+      <input type="textbox" class="form-control form-control-sm" id="inputEmail4" placeholder="Email">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputPassword4">Enrollment Number</label>
+      <input type="textbox" class="form-control form-control-sm" id="inputPassword4" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputEmail4">Project Name</label>
+      <input type="textbox" class="form-control form-control-sm" id="inputEmail4" placeholder="Email">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputPassword4">Password</label>
+      <input type="textbox" class="form-control form-control-sm" id="inputPassword4" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-row"> -->
+<!-- <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div> -->
+<!-- <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control form-control-sm" id="inputZip">
+    </div>
+  </div>
+  <div class="container">
+    <p>
+      <button type="submit" class="btn btn-primary btn-sm ">Cancel</button>
+      <button type="submit" class="btn btn-primary btn-sm ">Save</button>
+    </p>
+<p>
+  <a href="#" class="btn btn-primary my-2">Main call to action</a>
+  <a href="#" class="btn btn-primary my-2">Main call to action</a>
+</p>
+    <div class="form-group col-md-4">
+
+    </div>
+    <div class="form-group col-md-4">
+
+    </div>
+  </div>
+
+</form> -->
+<div class="main-div">
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputEmail4">Project Name</label>
+      <input #mytext type="textbox" class="form-control form-control-sm" (keyup)="search(mytext.value)"
+        placeholder="Email">
+      <div class="list-data" *ngIf="showList">
+        <div class="list" *ngFor="let item of list.session">
+          {{item.key}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td #tablevalue [attr.id]="jack" (click)="table(tablevalue)" >Jack</td>
+    <td>26</td>
+  </tr>
+</table>
