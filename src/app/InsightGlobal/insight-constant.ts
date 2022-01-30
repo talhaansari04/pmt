@@ -1,7 +1,7 @@
 export class InsightConstant {
-  public static InsightServerURL = 'http://localhost:8080/';
+  public static InsightServerURL = 'http://localhost:8080';
 
-  public static InsightBaseURL = InsightConstant.InsightServerURL + '';
+  public static InsightBaseURL = InsightConstant.InsightServerURL + '/';
 
   public static LOGIN = InsightConstant.InsightBaseURL + 'login';
 
